@@ -6,12 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class GameInput : MonoBehaviour
 {
-
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Backspace))
         {
             ReloadLevel();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            UnityEngine.Application.Quit();
         }
     }
 
@@ -21,4 +25,6 @@ public class GameInput : MonoBehaviour
 
         SceneManager.LoadScene(activeSceneIndex);
     }
+
+
 }
